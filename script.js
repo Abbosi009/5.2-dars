@@ -60,3 +60,32 @@ class CustomWeakMap extends WeakMap {
 }
 
 
+                       //******************** *//
+
+                         // Set va WeakSet//
+
+                      //********************//
+
+// 1. 
+function setUnion(set1, set2) {
+    return new Set([...set1, ...set2]);
+}
+console.log(setUnion(new Set([1, 2, 3]), new Set([2, 3, 4]))); 
+
+// 2. 
+function setIntersection(set1, set2) {
+    return new Set([...set1].filter(v => set2.has(v)));
+}
+console.log(setIntersection(new Set([1, 2, 3]), new Set([2, 3, 4]))); 
+
+// 3. 
+function checkSetSubset(set1, set2) {
+    for (let val of set1) {
+        if (!set2.has(val)) return false;
+    }
+    return true;
+}
+console.log(checkSetSubset(new Set([1, 2]), new Set([1, 2, 3, 4]))); 
+
+
+
