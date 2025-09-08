@@ -89,3 +89,27 @@ console.log(checkSetSubset(new Set([1, 2]), new Set([1, 2, 3, 4])));
 
 
 
+                      //******************** *//
+
+                        // Spread operatori //
+
+                     //******************** *//
+
+// 1. 
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); 
+
+// 2. 
+function mergeArr(arr1, arr2) {
+    return [...arr1, ...arr2];
+}
+console.log(mergeArr([1, 5, 8], [7, 9, 10])); 
+
+// 3. 
+function concatArrays(...arrays) {
+    return [].concat(...arrays);
+}
+console.log(concatArrays([1, 2], [3, 4], [5, 6])); 
+                     
